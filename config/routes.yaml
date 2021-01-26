@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+bebras:
+    path: /upe/bebras/{pasveikinimas}/{kiekis}
+    controller: App\Controller\UpesController::bebras
+
+udra:
+    path: /upe/udra
+    controller: App\Controller\UpesController::udra
