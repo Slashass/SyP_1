@@ -8,16 +8,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class UpesController extends AbstractController
 {
-    public function bebras(string $pasveikinimas, int $kiekis): Response
+    public function bebras(Request $r, string $pasveikinimas, int $kiekis): Response
     {
 
         $udraUrl = $this->generateUrl('udra');
-        // $order = $r->query->get('order');
+        $order = $r->query->get('order');
 
         return $this->render('upe/bebras.html.twig', [
             'say' => $pasveikinimas,
             'count' => $kiekis,
-            'go' => $udraUrl
+            'go' => $udraUrl,
+            'o' => $order
         ]);
     }
     public function udra(): Response
