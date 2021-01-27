@@ -6,14 +6,21 @@
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    button { background: grey; font-weight: bold; border: 1px solid black; padding: 8px; margin-top: 10px}
 </style>
 
 <div class="example-wrapper">
     <h1> {{ controller_name }} ✅</h1>
 
     <form action="{{path('calculator') }}" method="POST">
-    X: <input type="text" name="x">
-    Y: <input type="text" name="y">
+    Pirmas skaicius: 
+    <br>
+    <input type="text" name="x">
+    <br>
+    Antras skaicius: 
+    <br>
+    <input type="text" name="y">
+    <br>
     <button type="submit">SUMA</button>
     </form>
 

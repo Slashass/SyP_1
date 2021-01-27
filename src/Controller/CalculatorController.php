@@ -23,6 +23,7 @@ class CalculatorController extends AbstractController
         // paemam is flashbago 
         $result = $session->getFlashBag()->get('result', []);
 
+        // nuskaitymas is db visu objektu
         
 
         return $this->render('calculator/index.html.twig', [
