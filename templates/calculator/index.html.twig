@@ -31,13 +31,12 @@
     {% endif %}
     
     <br>
-    <br>
-    <br>
-
-    This friendly message is coming from:
+    
     <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/my_project1/src/Controller/CalculatorController.php'|file_link(0) }}">src/Controller/CalculatorController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/my_project1/templates/calculator/index.html.twig'|file_link(0) }}">templates/calculator/index.html.twig</a></code></li>
+    {% for r in history %}
+    <li>{{r.enter1}} + {{r.enter2}} = {{r.res}}</li>
+    {% endfor %}
     </ul>
+    
 </div>
 {% endblock %}

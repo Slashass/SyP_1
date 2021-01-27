@@ -24,11 +24,14 @@ class CalculatorController extends AbstractController
         $result = $session->getFlashBag()->get('result', []);
 
         // nuskaitymas is db visu objektu
-        
+        $res=$this->getDoctrine()
+            ->getRepository(Result::class)
+            ->findAll();
 
         return $this->render('calculator/index.html.twig', [
             'controller_name' => 'Calculator',
-            'result' => $result[0] ?? ''
+            'result' => $result[0] ?? '',
+            'history' => $res
             ]);
         }
 
